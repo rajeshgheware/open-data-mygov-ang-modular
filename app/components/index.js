@@ -3,7 +3,7 @@
 var angular = require('angular');
 
 angular
-	.module('ae', [
+	.module('app', [
 		// external libs
 		require('angular-ui-router'),
 		require('./dashboard'),
