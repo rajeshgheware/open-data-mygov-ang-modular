@@ -10,7 +10,9 @@ var gulp = require('gulp'),
     buffer = require('vinyl-buffer'),
     gutil = require('gulp-util'),
     sourcemaps = require('gulp-sourcemaps'),
-    webserver = require('gulp-webserver');
+    webserver = require('gulp-webserver'),
+    war = require('gulp-war'),
+    zip = require('gulp-zip');
 
 // -------------------------------------------
 // Configure the browserify options and callback
@@ -67,6 +69,20 @@ gulp.task('browserify', bundle);
 
 // wrapper around our typescript compile and clean
 gulp.task('compile', ['clean', 'browserify']);
+
+//jar the distribution
+gulp.task('war', function () {
+    gulp.src(["app/**"])
+        .pipe(war({
+            welcome: 'index.html',
+            displayName: 'Grunt WAR',
+        }))
+        .pipe(zip('app-static-webjar.jar'))
+        .pipe(gulp.dest("./dist"));
+
+});
+
+gulp.task('makejar',['browserify','war']);
 
 /**
  * @description
