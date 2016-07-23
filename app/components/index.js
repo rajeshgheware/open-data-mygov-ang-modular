@@ -6,6 +6,9 @@ angular
 	.module('app', [
 		// external libs
 		require('angular-ui-router'),
+		require('angular-touch'),
+		require('angular-animate'),
+		require('angular-ui-bootstrap'),
 		require('./dashboard'),
 		require('./home')
 
