@@ -9,6 +9,9 @@ angular
 		require('angular-touch'),
 		require('angular-animate'),
 		require('angular-ui-bootstrap'),
+		// require('bootstrap'),
+		// require('jquery'),
+		// require('jquery-ui'),
 		require('./dashboard'),
 		require('./home')
 
