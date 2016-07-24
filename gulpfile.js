@@ -12,7 +12,11 @@ var gulp = require('gulp'),
     sourcemaps = require('gulp-sourcemaps'),
     webserver = require('gulp-webserver'),
     war = require('gulp-war'),
-    zip = require('gulp-zip');
+    zip = require('gulp-zip'),
+    usemin = require('gulp-usemin'),
+    uglify = require('gulp-uglify'),
+    minifyCss = require('gulp-minify-css');
+
 
 // -------------------------------------------
 // Configure the browserify options and callback
@@ -82,7 +86,7 @@ gulp.task('war', function () {
 
 });
 
-gulp.task('makejar',['browserify','war']);
+gulp.task('makejar',['compile','war']);
 
 /**
  * @description
