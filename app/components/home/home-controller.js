@@ -8,7 +8,7 @@ module.exports = homeCtrl;
 * Responsible for the layout and display
 *
 */
-function homeCtrl($scope, $log) {
+function homeCtrl($scope, $log,uiGridConstants) {
   $scope.myData = [
     {
         "firstName": "Cox",
@@ -29,4 +29,6 @@ function homeCtrl($scope, $log) {
         "employed": false
     }
 ];
+
+
 }

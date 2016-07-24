@@ -7,7 +7,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Insights into Open Data</a>
+      <a class="navbar-brand" href="#">Insights into Open Data provided by Govt. of India</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
@@ -21,6 +21,7 @@
     </div>
   </div>
 </nav>
+<div>
 <div class="left-column">
 <div class="container-fluid">
       <div class="row">
@@ -28,17 +29,20 @@
           <ul class="nav nav-sidebar">
             <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
             <li><a ui-sref="app.dashboard" >Dashboard</a></li>
-            <li><a href="#">Analytics</a></li>
+            <li><a ui-sref="app.home" >Pin Codes</a></li>
             <li><a href="#">Export</a></li>
           </ul>
 
         </div>
 
       </div>
-    </div>
-  </div>
-  <div class="right-column">
+</div>
+</div>
+  <div class="container-fluid right-column" >
+<br><br><br>
+  	         <div ui-view="details"></div>
 
-  	<div ui-view="details"></div>
 
+</div>
+</div>
   </div>

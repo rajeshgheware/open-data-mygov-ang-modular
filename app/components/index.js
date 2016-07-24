@@ -10,6 +10,7 @@ angular
 		require('angular-animate'),
 		require('angular-ui-router'),
 		require('angular-ui-bootstrap'),
+		// require('angular-ui-grid'),
 		// require('bootstrap'),
 		// require('jquery'),
 		require('./dashboard'),
